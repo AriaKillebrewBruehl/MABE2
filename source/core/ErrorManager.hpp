@@ -105,10 +105,23 @@ namespace mabe {
       active = false;
     }
 
-    /// Remove all errors (don't change active status)
+    /// Remove all errors and warnings (don't change active status)
     void Clear() {
       errors.resize(0);
       next_error = 0;
+      warnings.resize(0);
+      next_warning = 0;
+    }
+
+    /// Remove all errors(don't change active status)
+    void ClearErrors() {
+      errors.resize(0);
+      next_error = 0;
+    }
+
+    /// Remove all warnings (don't change active status)
+    void ClearWarnings() {
+      warnings.resize(0);
       next_warning = 0;
     }
 
